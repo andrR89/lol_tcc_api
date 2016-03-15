@@ -7,7 +7,6 @@ import importlib
 from flask import Blueprint
 from flask_cors import CORS
 from .message_handler import register_messages
-from nexxera_auditing.elastic_search.flask_interceptor import LoggerFlaskInterceptor
 
 
 def create_app(config_name):

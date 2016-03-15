@@ -2,6 +2,8 @@
 
 from flasgger.utils import swag_from
 from flask import Blueprint, request, abort
+
+from lol.hello_lol import HelloLoL
 from security_platform.access_profile.service import AccessProfileService
 import json
 
@@ -17,6 +19,9 @@ def find_all():
         return '', 204
     return json.dumps(__as_dict_array___(response))
 
+@bp.route("/lol/static",  methods=['GET'])
+def find_static():
+    return HelloLoL().get_all_lores()
 
 @swag_from('swagger/access-profile/get-by-id.yml')
 @bp.route("/access-profiles/<id>", methods=['GET'])
