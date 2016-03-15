@@ -1,0 +1,16 @@
+Delete a User
+Delete a User
+---
+tags:
+  - /users
+parameters:
+  - in: path
+    name: id
+    description: "User ID"
+    required: true
+    type: string
+responses:
+  204:
+    description: "Success Removed"
+  404:
+    description: "Object not found"

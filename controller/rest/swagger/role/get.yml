@@ -1,0 +1,33 @@
+List with all Roles
+List with all Roles
+---
+tags:
+  - /roles
+responses:
+  200:
+    description: "An list of all Roles"
+    schema:
+      type: array
+      items:
+        type: object
+        schema:
+          required:
+            - _id
+            - name
+            - description
+            - uuid_publisher
+          properties:
+            _id:
+              type: string
+              description: "Role ID"
+            name:
+              type: string
+              description: "Role Name"
+            description:
+              type: string
+              description: "Role Description"
+            uuid_publisher:
+              type: string
+              description: "UUID of Publisher"
+  204:
+    description: "Success no content"

@@ -1,0 +1,18 @@
+Delete a Access Profile
+Delete a Access Profile
+---
+tags:
+  - /access-profiles
+parameters:
+  - in: path
+    name: id
+    description: "Access Profile ID"
+    required: true
+    type: string
+responses:
+  204:
+    description: "Success Removed"
+  400:
+    description: "Integrity constraint violation"
+  404:
+    description: "Object not found"

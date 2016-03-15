@@ -1,0 +1,81 @@
+Create a new Role Package
+Create a new Role Package
+---
+tags:
+  - /roles-packages
+parameters:
+  - in: body
+    name: body
+    schema:
+      id: role_package_post
+      required:
+        - name
+        - description
+        - uuid_publisher
+        - _roles
+      properties:
+        name:
+          type: string
+          description: "Role Package Name"
+        description:
+          type: string
+          description: "Role Package Description"
+        uuid_publisher:
+          type: string
+          description: "UUID of Publisher"
+        _roles:
+          type: array
+          description: "Roles associated with this Role Package"
+          items:
+            schema:
+              required:
+                - _id
+              properties:
+                _id:
+                  type: string
+                  description: "Role ID"
+responses:
+  200:
+    description: "Object successfully created"
+    schema:
+      required:
+        - _id
+        - name
+        - description
+        - uuid_publisher
+        - _roles
+      properties:
+        _id:
+          type: string
+          description: "Role Package ID"
+        name:
+          type: string
+          description: "Role Package Name"
+        description:
+          type: string
+          description: "Role Package Description"
+        uuid_publisher:
+          type: string
+          description: "UUID of Publisher"
+        _roles:
+          type: array
+          description: "Roles associated with this Role Package"
+          items:
+            schema:
+              required:
+                - _id
+              properties:
+                _id:
+                  type: string
+                  description: "Role ID"
+                name:
+                  type: string
+                  description: "Role Name"
+                description:
+                  type: string
+                  description: "Role Description"
+                uuid_publisher:
+                  type: string
+                  description: "UUID of Publisher"
+  400:
+    description: "Incorrectly submitted data"

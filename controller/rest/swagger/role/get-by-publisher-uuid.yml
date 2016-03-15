@@ -1,0 +1,39 @@
+List with all Roles by Publisher UUID
+List with all Roles by Publisher UUID
+---
+tags:
+  - /roles
+parameters:
+  - in: path
+    name: uuid
+    description: "Publisher UUID"
+    required: true
+    type: string
+responses:
+  200:
+    description: "An list of all Roles"
+    schema:
+      type: array
+      items:
+        type: object
+        schema:
+          required:
+            - _id
+            - name
+            - description
+            - uuid_publisher
+          properties:
+            _id:
+              type: string
+              description: "Role ID"
+            name:
+              type: string
+              description: "Role Name"
+            description:
+              type: string
+              description: "Role Description"
+            uuid_publisher:
+              type: string
+              description: "UUID of Publisher"
+  404:
+    description: "Object not found"

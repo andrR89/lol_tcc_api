@@ -1,0 +1,18 @@
+Delete a Role
+Delete a Role
+---
+tags:
+  - /roles
+parameters:
+  - in: path
+    name: id
+    description: "Role ID"
+    required: true
+    type: string
+responses:
+  204:
+    description: "Success Removed"
+  400:
+    description: "Integrity constraint violation"
+  404:
+    description: "Object not found"

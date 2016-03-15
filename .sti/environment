@@ -1,0 +1,5 @@
+APP_MODULE=wsgi:app
+PYTHONPATH=./controller:./config:./domain
+NLS_LANG=.UTF8
+LANG=en_US.UTF-8
+TZ=America/Sao_Paulo

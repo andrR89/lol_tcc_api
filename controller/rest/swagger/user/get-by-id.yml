@@ -1,0 +1,59 @@
+Get an User by ID
+Get an User by ID
+---
+tags:
+  - /users
+parameters:
+  - in: path
+    name: id
+    description: "User ID"
+    required: true
+    type: string
+responses:
+  200:
+    description: "Return the User"
+    schema:
+      type: array
+      items:
+        type: object
+        schema:
+          required:
+            - _id
+            - name
+            - surname
+            - email
+            - fg_active
+            - uuid_publisher
+            - _access_profiles
+          properties:
+            _id:
+              type: string
+              description: "Access Profile ID"
+            name:
+              type: string
+              description: "User Name"
+            surname:
+              type: string
+              description: "User Surname"
+            email:
+              type: string
+              description: "User Email"
+            fg_active:
+              type: integer
+              description: "Define if user is active(1) or not(0)"
+            uuid_publisher:
+              type: string
+              description: "UUID of Publisher"
+            _access_profiles:
+              type: array
+              description: "Access Profiles associated with this User"
+              items:
+                schema:
+                  required:
+                    - _id
+                  properties:
+                    _id:
+                      type: string
+                      description: "Access Profile ID"
+  404:
+    description: "Object not found"

@@ -1,0 +1,48 @@
+Create a new Role
+Create a new Role
+---
+tags:
+  - /roles
+parameters:
+  - in: body
+    name: body
+    schema:
+      id: role_post
+      required:
+        - name
+        - description
+        - uuid_publisher
+      properties:
+        name:
+          type: string
+          description: "Role Name"
+        description:
+          type: string
+          description: "Role Description"
+        uuid_publisher:
+          type: string
+          description: "UUID of Publisher"
+responses:
+  200:
+    description: "Object successfully created"
+    schema:
+      required:
+        - _id
+        - name
+        - description
+        - uuid_publisher
+      properties:
+        _id:
+          type: string
+          description: "Role ID"
+        name:
+          type: string
+          description: "Role Name"
+        description:
+          type: string
+          description: "Role Description"
+        uuid_publisher:
+          type: string
+          description: "UUID of Publisher"
+  400:
+    description: "Incorrectly submitted data"
