@@ -12,7 +12,5 @@ Flask-Autodoc==0.1.2
 gunicorn==19.3.0
 ming==0.5.3
 flask_cors==2.1.2
-elasticsearch==2.2.0
 pytz==2015.7
 Flasgger==0.5.5
-git+https://gitlab.nexxera.com/rangel.torrezan/nexxera-auditing.git@master
