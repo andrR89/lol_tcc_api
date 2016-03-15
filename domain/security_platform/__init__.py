@@ -6,5 +6,5 @@ import os
 
 
 session = Session()
-session.bind = create_datastore(os.environ.get('DATABASE_URL'))
+session.bind = create_datastore(os.environ.get('MONGO_URL'))
 odm_session = ODMSession(session)
