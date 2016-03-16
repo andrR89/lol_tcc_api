@@ -6,7 +6,7 @@ from flask import Blueprint, request, abort
 from lol.hello_lol import HelloLoL
 from security_platform.access_profile.service import AccessProfileService
 import json
-
+import simplejson
 
 bp = Blueprint('access-profiles', __name__)
 access_profile_service = AccessProfileService()
@@ -21,7 +21,7 @@ def find_all():
 
 @bp.route("/lol/static",  methods=['GET'])
 def find_static():
-    return HelloLoL().get_all_lores()
+    return simplejson.dumps(HelloLoL().get_all_lores(), ensure_ascii=False)
 
 @swag_from('swagger/access-profile/get-by-id.yml')
 @bp.route("/access-profiles/<id>", methods=['GET'])
