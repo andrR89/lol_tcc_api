@@ -6,7 +6,6 @@ import pkgutil
 import importlib
 from flask import Blueprint
 from flask_cors import CORS
-from .message_handler import register_messages
 
 
 def create_app(config_name):
@@ -23,8 +22,6 @@ def create_app(config_name):
     #Create cors configuration
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-
-    register_messages(app)
 
     #Register blueprints
     register_blueprints(app)
