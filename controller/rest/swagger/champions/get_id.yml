@@ -1,0 +1,18 @@
+List Champions by ID
+
+---
+tags:
+  - /lol/static/champions
+parameters:
+  - in: path
+    name: id
+    description: "Champ ID"
+    required: true
+    type: string
+  - in: query
+    name: champData
+    description: "Champion Data"
+    type: string
+responses:
+  200:
+    description: "List All Champions"

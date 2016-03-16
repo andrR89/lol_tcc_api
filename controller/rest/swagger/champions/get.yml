@@ -1,0 +1,13 @@
+List All Champions of LoL
+
+---
+tags:
+  - /lol/static/champions
+parameters:
+  - in: query
+    name: champData
+    description: "Champion Data"
+    type: string
+responses:
+  200:
+    description: "List All Champions"

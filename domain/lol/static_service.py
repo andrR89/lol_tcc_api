@@ -17,10 +17,7 @@ class HelloLoL(object):
         try:
             url = self._get_additional_args(args, self.url_service + "?" + self.apiKey)
             response, content = self.conn.request(url, "GET", "", self.headers)
-            champions = ChampionListSchema()
-            result = champions.load(simplejson.loads(content.decode("utf-8")))
-            return result.data
-        ##TODO GerarException
+            return simplejson.loads(content.decode("utf-8"))
         except Exception as e:
             raise Exception(e)
 
@@ -29,9 +26,7 @@ class HelloLoL(object):
             url = self._get_additional_args(args, self.url_service + "/" + id + "?" + self.apiKey)
 
             response, content = self.conn.request(url, "GET", "", self.headers)
-            champion = ChampionSchema()
-            result = champion.load(simplejson.loads(content.decode("utf-8")), partial=True)
-            return champion.dump(result.data).data
+            return simplejson.loads(content.decode("utf-8"))
         except Exception as e:
             raise Exception(e)
 

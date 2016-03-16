@@ -10,10 +10,10 @@ app.config['SWAGGER'] = {
     "specs": [
         {
             "version": "1.0.0",
-            "title": "Security Financial Platform",
+            "title": "LoL API Tcc",
             "endpoint": 'v1_spec',
             "route": '/v1/spec',
-            "description": "Security Financial Platform API"
+            "description": "API do LoL para utilização no Tcc"
         }
     ]
 }
