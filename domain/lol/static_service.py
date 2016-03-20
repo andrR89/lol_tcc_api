@@ -2,7 +2,6 @@
 import httplib2
 import simplejson
 
-from lol.champions import ChampionSchema, ChampionListSchema
 
 
 class HelloLoL(object):

@@ -1,7 +1,7 @@
 # coding=utf-8
 import os
 
-from rest import create_app
+from controller.rest import create_app
 from flasgger import Swagger
 
 
