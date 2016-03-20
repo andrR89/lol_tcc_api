@@ -1,7 +1,9 @@
 # coding=utf-8
+import os
 
 from rest import create_app
 from flasgger import Swagger
+
 
 app = create_app('config.default')
 

@@ -1,7 +1,7 @@
 from flasgger.utils import swag_from
 from flask import Blueprint, jsonify, request
 
-from lol.static_service import HelloLoL
+from domain.lol.static_service import HelloLoL
 
 bp = Blueprint('lol-static', __name__)
 hello_lol = HelloLoL()
